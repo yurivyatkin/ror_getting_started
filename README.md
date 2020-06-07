@@ -35,3 +35,16 @@ A clean way to shutdown the project would be to run
 $ docker-compose down
 ```
 (in a separate terminal).
+
+## Known issues:
+
+### "FATAL: could not open file "global/pg_filenode.map" Permission denied"
+
+This erro may occurr at the first run.
+In such case, 
+```
+$ docker-compose run db bash
+root@:/# rm -rf /var/lib/pgsql/data
+root@:/# exit
+```
+ (to be investigated)
