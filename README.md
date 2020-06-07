@@ -38,9 +38,21 @@ $ docker-compose down
 
 ## Known issues:
 
+### mkdir': Permission denied @ dir_s_mkdir
+
+This error occurs on the first run.
+It is still required to stop the project and update the permissions:
+
+```
+sudo chown -R $USER:$USER .
+```
+
+Then start again.
+
+
 ### "FATAL: could not open file "global/pg_filenode.map" Permission denied"
 
-This erro may occurr at the first run.
+This error may occur at the first run.
 In such case, 
 ```
 $ docker-compose run db bash
